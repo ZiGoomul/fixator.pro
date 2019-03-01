@@ -20,15 +20,31 @@
     <link href="css/main.css" rel="stylesheet" />
     <link rel="icon" href="img/favicon.png" type="image/png">
 
+<!-- Переключение языков -->
+<script>
+    var ref = document.referrer;
+    var str = ref.split('/')
+    var len = str.length
+    var strhost = `${str[len-2]}/${str[len-1]}`
+    if(strhost !='uk/'){
+        var userLang = navigator.languages && navigator.languages[0] || // Chrome / Firefox
+                       navigator.language ||   // All browsers
+                       navigator.userLanguage; // IE <= 10
+        if (userLang == 'uk' || userLang == 'uk-UA') {
+            window.location.href = "/uk/" 
+        }
+    }
+</script>
+<!-- Переключение языков -->    
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-52SDRXQ');</script>
-<!-- End Google Tag Manager -->    
-    
-    <title>Фиксатор - ремонт копьютеров и ноутбуков на дому и в офисе, компьютерная помощь, компьютерный мастер.</title>
+<!-- End Google Tag Manager -->
+<title>Фиксатор - ремонт копьютеров и ноутбуков на дому и в офисе, компьютерная помощь, компьютерный мастер.</title>
 
 </head>
 <body>
@@ -37,17 +53,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52SDRXQ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
 <header id="header" class="container-fluid px-0">
     <div class="bg-header"></div>
     <div class="bg-menu mx-auto position-fixed animated slideInDown" style="z-index: 11;">
         <div class="container h-100">
+            <div class=""><a href="uk/" class="lang">UA</a></div>
             <div class="d-flex d-md-none justify-content-between align-items-center m-2 px-3">
-                <span class=""><a href="index.html" class="link txt-sans-bold-orange-24"><img src="img/logo.svg" class="img-fluid" style="margin-top: 0;" alt=""></a></span>
+                <span class=""><a href="" class="link txt-sans-bold-orange-24"><img src="img/logo.svg" class="img-fluid" style="margin-top: 0;" alt=""></a></span>
                 <span class=""> <button type="button" id="bar" onclick="$('#modal-4.modaling-menu').toggle(); return false;" class="button-bar"></button></span>
             </div>
             <div class="d-none d-md-flex justify-content-around align-items-center h-50 mt-2">
-                <span class=""><a href="index.html" class="link"><img src="img/logo.svg" class="img-fluid" style="margin-top: -14px;" alt=""></a></span>
+                <span class=""><a href="" class="link"><img src="img/logo.svg" class="img-fluid" style="margin-top: -14px;" alt=""></a></span>
                 <span class=""><a href="#services" class="link txt-sans-bold-black-14">Услуги</a></span>
                 <span class=""><a href="#about" class="link txt-sans-bold-black-14">О нас</a></span>
                 <span class=""><a href="#sale" class="link txt-sans-bold-black-14">Акционные предложения</a></span>
@@ -84,7 +100,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <p class="txt-sans-regular-grey-22 my-0">ПРИЕДЕМ ПО ВАШЕМУ АДРЕСУ<br/> ВЫЕЗД МАСТЕРА <span class="txt-sans-bold-orange-28">60 МИН</span></p>
             </div>
             <div class="mt-4 text-center header-button">
-                <button type="buttton" onclick="$('#modal-2.modaling').show();" class="button button-lg txt-sans-bold-white-24 text-center">ВЫЗВАТЬ МАСТЕРА</button>
+                <button type="button" onclick="$('#modal-2.modaling').show();" class="button button-lg txt-sans-bold-white-24 text-center">ВЫЗВАТЬ МАСТЕРА</button>
             </div>
         </div>
     </div>
@@ -125,7 +141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="text-center mt-3">
                             <p class="txt-sans-bold-black-14 uppercase">Ремонт ноутбука и ПК</p>
                         </div>
-                    </div>                                    
+                    </div>
                 </div>
                 <div class="my-5 w-100 d-flex flex-column justify-content-center align-items-center">
                     <div class="service p-3">
@@ -149,7 +165,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="text-center mt-3">
                             <p class="txt-sans-bold-black-14 uppercase">Удаление вирусов</p>
                         </div>
-                    </div>                
+                    </div>
                 </div>
                 <div class="my-5 w-100 d-flex flex-column justify-content-center align-items-center">
                     <div class="service p-3">
@@ -197,14 +213,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="text-center mt-3">
                             <p class="txt-sans-bold-black-14 uppercase">Помощь в сборке ПК</p>
                         </div>
-                    </div>                
+                    </div>
                 </div>
                 <div class="my-5 w-100 d-flex flex-column justify-content-center align-items-center">
                     <div class="service p-3">
                         <div class="service-img p-3" style="background-image: url('img/img-service-09.png');">
                             <div class="service-block justify-content-start align-items-center w-100 h-100 p-3 wow-services-mob fadeIn">
                                 <img src="img/img-line-white--vertical-sm.png" class="mr-3" alt="">
-                                <p class="txt-sans-bold-white-14 my-0">Настройка и установка программ соответственно Вашим  задачам</p>
+                                <p class="txt-sans-bold-white-14 my-0">Настройка и установка программ соответственно Вашим задачам</p>
                             </div>
                         </div>
                         <div class="text-center mt-3">
@@ -236,7 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="text-center mt-3">
                             <p class="txt-sans-bold-black-14 uppercase">Ремонт ноутбука и ПК</p>
                         </div>
-                    </div>                                    
+                    </div>
                 </div>
                 <div class="my-5 w-100 d-flex justify-content-between">
                     <div class="service p-3">
@@ -260,7 +276,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="text-center mt-3">
                             <p class="txt-sans-bold-black-14 uppercase">Удаление вирусов</p>
                         </div>
-                    </div>                
+                    </div>
                 </div>
                 <div class="my-5 w-100 d-flex justify-content-between">
                     <div class="service p-3 mx-md-4 mx-lg-5">
@@ -315,7 +331,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="service-img p-3" style="background-image: url('img/img-service-09.png');">
                             <div class="service-block justify-content-start align-items-center w-100 h-100 p-3 wow-services-mob fadeIn">
                                 <img src="img/img-line-white--vertical-sm.png" class="mr-3" alt="">
-                                <p class="txt-sans-bold-white-12 my-0">Настройка и установка программ соответственно Вашим  задачам</p>
+                                <p class="txt-sans-bold-white-12 my-0">Настройка и установка программ соответственно Вашим задачам</p>
                             </div>
                         </div>
                         <div class="text-center mt-3">
@@ -358,7 +374,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="text-center mt-3">
                             <p class="txt-sans-bold-black-14 uppercase">Установка Windows</p>
                         </div>
-                    </div>                
+                    </div>
                 </div>
                 <div class="my-5 w-100 d-flex justify-content-center">
                     <div class="service p-3 wow fadeInUp" data-wow-delay="300ms">
@@ -393,7 +409,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="text-center mt-3">
                             <p class="txt-sans-bold-black-14 uppercase">Ускорение ноутбука</p>
                         </div>
-                    </div>                
+                    </div>
                 </div>
                 <div class="my-5 w-100 d-flex justify-content-center">
                     <div class="service p-3 wow fadeInUp" data-wow-delay="300ms">
@@ -422,13 +438,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="service-img p-3" style="background-image: url('img/img-service-09.png');">
                             <div class="service-hover-block justify-content-start align-items-center w-100 h-100 p-3">
                                 <img src="img/img-line-white--vertical-sm.png" class="mr-3" alt="">
-                                <p class="txt-sans-bold-white-14 my-0">Настройка и установка программ соответственно Вашим  задачам</p>
+                                <p class="txt-sans-bold-white-14 my-0">Настройка и установка программ соответственно Вашим задачам</p>
                             </div>
                         </div>
                         <div class="text-center mt-3">
                             <p class="txt-sans-bold-black-14 uppercase">Установка и настройка программ</p>
                         </div>
-                    </div>                
+                    </div>
                 </div>
             </div>
         </div>
@@ -466,8 +482,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <div class="w-100 mt-4 text-center text-md-left">
                             <button type="submit" class="button button-xl txt-sans-bold-white-18 uppercase">Вызвать мастера</button> 
-                        </div>     
-                    </form>                    
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -605,7 +621,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         </div>
                                         <div class="text-center">
                                             <p class="my-0 txt-sans-bold-black-18">Богдан Томашевский</p>
-                                            <p class="my-0 txt-sans-regular-grey-18">опыт - 2 года</p>
+                                            <p class="my-0 txt-sans-regular-grey-18">опыт - 4 года</p>
                                         </div>
                                     </div>
                                 </div>
@@ -676,7 +692,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             
             <div class="col-12 col-md-11 wow fadeInUp" data-wow-delay="400ms">
-                <div id="carousel-in-sale" class="mb-5 w-100 d-flex justify-content-center">                
+                <div id="carousel-in-sale" class="mb-5 w-100 d-flex justify-content-center">
                     <div class="sale p-3 mx-2 mx-md-4">
                         <div class="sale-title">
                             <div class="h-100 w-100 d-flex justify-content-center align-items-center">
@@ -866,7 +882,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="sale-img p-3" style="background-image: url('img/img-sale-09.png');">
                             <div class="sale-hover-block justify-content-start align-items-center w-100 h-100 p-3">
                                 <img src="img/img-line-white--vertical-sm.png" class="mr-3" alt="">
-                                <p class="w-100 txt-sans-bold-white-14 text-left my-0">Срок: 5-7 дней<br/>Цена: от 1200 грн</p>
+                                <p class="w-100 txt-sans-bold-white-14 text-left my-0">Срок: 1-3 дней<br/>Цена: от 1200 грн</p>
                             </div>
                         </div>
                         <div class="sale-button">
@@ -906,7 +922,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="wow fadeInLeft" style="z-index: 2; width: 100%; max-width: 992px; min-height: 180px; border-radius: 6px; background: linear-gradient(to right, #fff , transparent);">
                     <div class="d-flex flex-column flex-md-row justify-content-center align-items-start p-3">
                         <div class="text-center text-md-left">
-                            <p class="txt-sans-bold-black-30 uppercase">Закажите <span class="txt-sans-bold-orange-30">расчет</span>  стоимости</p>
+                            <p class="txt-sans-bold-black-30 uppercase">Закажите <span class="txt-sans-bold-orange-30">расчет</span> стоимости</p>
                             <p class="txt-sans-regular-grey-20">Опишите Вашу проблему своими словами и наш специалист сориентирует Вас по цене наших услуг в течение 12 минут</p>
                         </div>
                         <div class="mx-auto">
@@ -937,7 +953,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="pl-5 pl-xs-0 wow fadeInUp">
                             <p class="txt-sans-bold-black-18">Расположение</p>
                             <p class="txt-sans-regular-black-16">Сервисный центр</p>
-                            <p class="txt-sans-regular-black-16" style="white-space:nowrap;">г.Киев 03058, <br/>ул.Машиностроительная 8, оф.1</p>
+                            <p class="txt-sans-regular-black-16" style="white-space:nowrap;">г. Киев 03058, <br/>ул. Машиностроительная 8, оф.1</p>
                         </div>
                     </div>
                     <div class="col-12 col-xs-6 col-md-3 col-xl-2 mt-4 mt-xs-0">
@@ -1022,8 +1038,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
    var wow = new WOW(
     {
-      boxClass:     'wow',      // animated element css class (default is wow)
-      animateClass: 'animated', // animation css class (default is animated)
+      boxClass:     'wow',       // animated element css class (default is wow)
+      animateClass: 'animated',  // animation css class (default is animated)
       offset:       0,          // distance to the element when triggering the animation (default is 0)
       mobile:       false,       // trigger animations on mobile devices (default is true)
       live:         true,       // act on asynchronously loaded content (default is true)
@@ -1063,14 +1079,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="text-center">
                         <div class="closing">
                             <button type="button" onclick="$('#modal-1.modaling').hide();" class="button-close">&times;</button>
-                        </div>                         
+                        </div>
                         <h1 class="txt-sans-bold-black-30 uppercase title-line">Заказать звонок</h1>
                     </div>
                     <form>
                         <div><input type="hidden" value="Заказать звонок" name="title"><input type="hidden" name="goal" value="goal3"></div>
                         <div class="mt-4"><input type="text" name="name" placeholder="Имя" class="input input-xl px-3" required></div>
                         <div class="mt-4"><input type="text" name="phone-number" placeholder="Номер телефона" class="input input-xl px-3" required></div>
-                        <div class="mt-4"><button type="submit"  class="button button-xl txt-sans-bold-white-18 uppercase">Заказать звонок</button></div>
+                        <div class="mt-4"><button type="submit" class="button button-xl txt-sans-bold-white-18 uppercase">Заказать звонок</button></div>
                     </form>
                 </div>
             </div>
@@ -1081,7 +1097,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="modal-2" class="container-fluid modaling" style="z-index: 12;">
     <div class="container">
         <div class="modaling-content animated fadeInDown">
-            <div class="col-12 mt-5">                    
+            <div class="col-12 mt-5">
                 <div class="d-flex flex-column justify-content-center align-items-center h-100 w-100">
                     <div style="background-color: #fff; border-radius: 6px; box-shadow: 0 0 8px #000;" class="p-4 p-sm-5">
                         <div class="text-center">
@@ -1105,7 +1121,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="modal-3" class="container-fluid modaling" style="z-index: 12;">
     <div class="container">
         <div class="modaling-content animated fadeInDown">
-            <div class="col-12 mt-5">                    
+            <div class="col-12 mt-5">
                 <div class="d-flex flex-column justify-content-center align-items-center h-100 w-100">
                     <div style="background-color: #fff; border-radius: 6px; box-shadow: 0 0 8px #000;" class="p-5">
                         <div class="text-center">
