@@ -13,7 +13,7 @@
     color: #2193d2;
     position: absolute;
 	top: 30px;
-    left: 10px;
+    /*left: 10px;*/
 }
 .lang:hover {
     color: #ff7800;
